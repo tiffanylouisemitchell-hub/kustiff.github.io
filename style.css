@@ -1,1 +1,114 @@
 
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s ease; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; background-color: #FAFAFA; line-height: 1.7; }
+        h1, h2, h3 { font-family: 'Crimson Text', serif; font-weight: 400; color: #2b3a30; }
+
+        header {
+    position: fixed; top: 0; width: 100%;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 10px 6%; 
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(12px); 
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.logo {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    margin: 0;
+}
+        .logo { font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; color: #2b3a30; text-decoration: none; font-weight: bold; }
+        nav a { margin-left: 25px; text-decoration: none; color: #2b3a30; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+        nav a:hover { color: #84A58D; }
+
+        section { padding: 100px 8%; }
+
+        /* HERO */
+       #home {
+    min-height: 100vh; display: flex; align-items: center; justify-content: flex-end;
+    background: url('Hands and seedling.png') center/cover no-repeat;
+}
+        .hero-box {
+            background-color: rgba(242, 247, 244, 0.75);
+            padding: 40px; max-width: 450px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* EXPERTISE SECTION - FIXED 3 COLUMNS */
+        #expertise { background: white; text-align: center; }
+        .expertise-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 30px; 
+            margin-top: 50px; 
+        }
+        .expertise-link { text-decoration: none; color: inherit; display: block; }
+        .expertise-card { 
+            background: #fdfdfd; padding: 40px 30px; border-top: 4px solid #84A58D; 
+            height: 100%; display: flex; flex-direction: column;
+        }
+        .expertise-card:hover { transform: translateY(-10px); background: #f4f7f5; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .expertise-card h3 { margin-bottom: 15px; }
+
+        /* ABOUT SECTION */
+        #about { display: flex; padding: 0; background: #E2EFE6; }
+.about-img { 
+    flex: 1; 
+    background: url('Headshot.png') center/cover no-repeat; 
+    min-height: 600px; 
+}
+        .about-text { flex: 1; padding: 6%; display: flex; flex-direction: column; justify-content: center; }
+        
+        .contact-form { margin-top: 30px; display: grid; gap: 10px; width: 100%; max-width: 400px; }
+        .contact-form input, .contact-form textarea { 
+            padding: 12px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6); font-family: inherit;
+        }
+
+        /* TESTIMONIAL SLIDER WITH ARROWS */
+        #testimonials { background: white; text-align: center; position: relative; padding: 100px 8%; }
+        .testimonial-container { max-width: 800px; margin: 0 auto; position: relative; overflow: hidden; }
+        .testimonial-slide { display: none; padding: 20px; animation: fadeIn 0.5s; }
+        .testimonial-slide.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .nav-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: none; border: none; font-size: 2rem; color: #84A58D; cursor: pointer; padding: 10px;
+        }
+        .prev { left: 0; }
+        .next { right: 0; }
+
+        /* TRANSLUCENT FOOTER */
+      footer { 
+    background: rgba(43, 58, 48, 0.65); 
+            backdrop-filter: blur(10px);
+            color: white; padding: 80px 8%; text-align: center; 
+        }
+        footer a { color: #84A58D; text-decoration: none; font-size: 1.2rem; font-weight: bold; }
+
+        .btn { 
+            display: inline-block; padding: 12px 25px; background: #84A58D; 
+            color: white; text-decoration: none; text-transform: uppercase; 
+            font-size: 0.75rem; margin-top: 20px; border: none; cursor: pointer;
+        }
+        .btn:hover { background: #6b8a74; letter-spacing: 1px; }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 900px) {
+            .expertise-grid { grid-template-columns: 1fr; }
+            #about { flex-direction: column; }
+            .about-img { min-height: 350px; order: -1; }
+            header { padding: 15px 4%; }
+            nav a { margin-left: 15px; font-size: 0.7rem; }
+        }
