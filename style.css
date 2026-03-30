@@ -5,7 +5,7 @@
         h1, h2, h3 { font-family: 'Crimson Text', serif; font-weight: 400; color: #2b3a30; }
 
         header {
-    position: fixed; top: 0; width: 100%;
+    position: fixed; top: 0; width: 80%;
     display: flex; flex-direction: column; align-items: center;
     padding: 10px 6%; 
     background: rgba(255, 255, 255, 0.8); 
