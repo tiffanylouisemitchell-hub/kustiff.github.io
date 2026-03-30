@@ -46,7 +46,7 @@ nav a {
         }
 
         /* EXPERTISE SECTION - FIXED 3 COLUMNS */
-        #expertise { background: white; text-align: center; }
+        #expertise { background: brown; text-align: center; }
         .expertise-grid { 
             display: grid; 
             grid-template-columns: repeat(3, 1fr); 
