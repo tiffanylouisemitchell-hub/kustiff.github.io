@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seeds of Life Therapy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Helvetica+Neue:wght@300&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        * { box-sizing: border-box; margin: 0; padding: 0; transition: all 0.3s ease; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; background-color: #FAFAFA; line-height: 1.7; }
+        h1, h2, h3 { font-family: 'Crimson Text', serif; font-weight: 400; color: #2b3a30; }
+
+        header {
+    position: fixed; top: 0; width: 100%;
+    display: flex; flex-direction: column; align-items: center;
+    padding: 10px 6%; 
+    background: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(12px); 
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.logo {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    margin: 0;
+}
+        .logo { font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; color: #2b3a30; text-decoration: none; font-weight: bold; }
+        nav a { margin-left: 25px; text-decoration: none; color: #2b3a30; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+        nav a:hover { color: #84A58D; }
+
+        section { padding: 100px 8%; }
+
+        /* HERO */
+       #home {
+    min-height: 100vh; display: flex; align-items: center; justify-content: flex-end;
+    background: url('Hands and seedling.png') center/cover no-repeat;
+}
+        .hero-box {
+            background-color: rgba(242, 247, 244, 0.75);
+            padding: 40px; max-width: 450px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* EXPERTISE SECTION - FIXED 3 COLUMNS */
+        #expertise { background: white; text-align: center; }
+        .expertise-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 30px; 
+            margin-top: 50px; 
+        }
+        .expertise-link { text-decoration: none; color: inherit; display: block; }
+        .expertise-card { 
+            background: #fdfdfd; padding: 40px 30px; border-top: 4px solid #84A58D; 
+            height: 100%; display: flex; flex-direction: column;
+        }
+        .expertise-card:hover { transform: translateY(-10px); background: #f4f7f5; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .expertise-card h3 { margin-bottom: 15px; }
+
+        /* ABOUT SECTION */
+        #about { display: flex; padding: 0; background: #E2EFE6; }
+.about-img { 
+    flex: 1; 
+    background: url('Headshot.png') center/cover no-repeat; 
+    min-height: 600px; 
+}
+        .about-text { flex: 1; padding: 6%; display: flex; flex-direction: column; justify-content: center; }
+        
+        .contact-form { margin-top: 30px; display: grid; gap: 10px; width: 100%; max-width: 400px; }
+        .contact-form input, .contact-form textarea { 
+            padding: 12px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.6); font-family: inherit;
+        }
+
+        /* TESTIMONIAL SLIDER WITH ARROWS */
+        #testimonials { background: white; text-align: center; position: relative; padding: 100px 8%; }
+        .testimonial-container { max-width: 800px; margin: 0 auto; position: relative; overflow: hidden; }
+        .testimonial-slide { display: none; padding: 20px; animation: fadeIn 0.5s; }
+        .testimonial-slide.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .nav-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: none; border: none; font-size: 2rem; color: #84A58D; cursor: pointer; padding: 10px;
+        }
+        .prev { left: 0; }
+        .next { right: 0; }
+
+        /* TRANSLUCENT FOOTER */
+      footer { 
+    background: rgba(43, 58, 48, 0.65); 
+            backdrop-filter: blur(10px);
+            color: white; padding: 80px 8%; text-align: center; 
+        }
+        footer a { color: #84A58D; text-decoration: none; font-size: 1.2rem; font-weight: bold; }
+
+        .btn { 
+            display: inline-block; padding: 12px 25px; background: #84A58D; 
+            color: white; text-decoration: none; text-transform: uppercase; 
+            font-size: 0.75rem; margin-top: 20px; border: none; cursor: pointer;
+        }
+        .btn:hover { background: #6b8a74; letter-spacing: 1px; }
+
+        /* MOBILE RESPONSIVENESS */
+        @media (max-width: 900px) {
+            .expertise-grid { grid-template-columns: 1fr; }
+            #about { flex-direction: column; }
+            .about-img { min-height: 350px; order: -1; }
+            header { padding: 15px 4%; }
+            nav a { margin-left: 15px; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+    <a href="#home" class="logo">Seeds of Life Therapy</a>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+    </nav>
+</header>
+
+    <section id="home">
+        <div class="hero-box">
+            <h1>Planting seeds for a healthier life.</h1>
+            <p>Find Understanding and Peace amidst Life's Challenges.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="expertise">
+        <h2>Areas of Expertise</h2>
+        <div class="expertise-grid">
+            <a href="#" class="expertise-link">
+                <div class="expertise-card">
+                    <h3>Individual Therapy</h3>
+                    <p>Finding calm in the chaos. Click to learn about my approach to anxiety and stress.</p>
+                </div>
+            </a>
+            <a href="#" class="expertise-link">
+                <div class="expertise-card">
+                    <h3>Fertility & Perinatal</h3>
+                    <p>Navigating new chapters in parenthood. Click to read more about specialized support.</p>
+                </div>
+            </a>
+            <a href="#" class="expertise-link">
+                <div class="expertise-card">
+                    <h3>Ethical Non-Monogamy</h3>
+                    <p>Cultivating your true self within complex relationships. Click for our focus areas.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-img"></div>
+        <div class="about-text">
+            <h2>About Me and My Practice</h2>
+            <p>I believe healing is a collaborative journey. My approach is warm, grounded in nature, and deeply rooted in the belief that everyone has the capacity for growth.</p>
+            
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" rows="4" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="testimonial-container">
+            <div class="testimonial-slide active">
+                <p style="font-style: italic; font-size: 1.5rem;">"Kusuma is a great listener and offered me a safe space to discuss my problems and then gave me effective solutions and suggestions. I highly recommend Kusuma and appreciate her compassion."</p>
+                <p style="margin-top: 15px; color: #84A58D;">— FORMER CLIENT</p>
+            </div>
+            <div class="testimonial-slide">
+                <p style="font-style: italic; font-size: 1.5rem;">"Working with Kusuma was a wonderful opportunity for myself and my wife to grow our relationship. Kusuma was able to gently guide our sessions into being productive and meaningful. Both myself and my wife always felt heard and respected. We both highly recommend Kusuma."</p>
+                <p style="margin-top: 15px; color: #84A58D;">— FORMER CLIENTS (COUPLE)</p>
+            </div>
+            <div class="testimonial-slide">
+                <p style="font-style: italic; font-size: 1.5rem;">"Kusuma did an amazing job of holding space and helping my partner and I navigate intense challenges we faced in our relationship. Being both polyamorous and different flavours of neurodivergent, we often were dealing with fairly complex issues that required a nuanced understanding. I felt like Kusuma really was invested in helping us, and took all of our feedback and considerations seriously while still being able to challenge us in appropriate ways. I would highly recommend her to anyone seeking counselling in their relationship."</p>
+                <p style="margin-top: 15px; color: #84A58D;">— ENM COUPLE</p>
+            </div>
+            <div class="testimonial-slide">
+                <p style="font-style: italic; font-size: 1.5rem;">"We really appreciated how candid Kusuma was, while still being respectful, and making sure both of our feelings were acknowledged and respected. It felt like we were being validated and heard in a safe, non-judgmental space. We noticed her excellent, consistent eye contact, which made us feel truly seen. As a couple, we both felt she's very good at focusing on our strengths, which was really helpful. Our communication continues to vastly improve, as does our conflict resolution skills, not to mention our sense of emotional togetherness and connection. In addition, the non-violent communication skills she shared are a super helpful technique."</p>
+                <p style="margin-top: 15px; color: #84A58D;">— FORMER CLIENTS (COUPLE)</p>
+            </div>
+        </div>
+        <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+    <footer>
+        <p style="margin-bottom: 20px; opacity: 0.9;">Ready to plant the seeds for the life you desire?</p>
+        <a href="mailto:seedsoflifetherapy@gmail.com">seedsoflifetherapy@gmail.com</a>
+        <p style="margin-top: 40px; font-size: 0.7rem; opacity: 0.6;">© 2026 SEEDS OF LIFE THERAPY. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
+
+— 
+
+
+The reason the page was jumping to the top is that the href="#" attribute acts as a "top of page" anchor when no specific URL is provided.
+To create a professional multi-page experience, you will need to create three separate HTML files in the same folder as your main index.html. Below is a cohesive design template you can use for all three sub-pages. I have optimized the copy for SEO by using high-intent keywords like "counselling," "support," and "therapy" combined with specific niche terms.
+1. File: individual-couples.html
+SEO Focus: Relationship health, anxiety relief, communication tools.
+HTML
+
+<section style="padding-top: 150px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 3rem; margin-bottom: 30px;">Individual and Couple's Counselling</h1>
+        <p>Life’s transitions and relationship dynamics can often feel overwhelming. Whether you are navigating personal anxiety or seeking to strengthen the bond with your partner, our sessions provide a grounded, compassionate space for growth.</p>
+        
+        <h2 style="margin-top: 40px;">For Individuals</h2>
+        <p>We focus on identifying the root of stress, managing anxiety, and building resilience. My approach helps you reconnect with your values and find clarity amidst life's noise.</p>
+        
+        <h2 style="margin-top: 40px;">For Couples</h2>
+        <p>Communication is the soil in which relationships grow. We work on de-escalating conflict, increasing emotional intimacy, and creating a shared language of support and understanding.</p>
+        
+        <a href="index.html#about" class="btn">Book a Consultation</a>
+    </div>
+</section>
+2. File: fertility-perinatal.html
+SEO Focus: Postpartum support, infertility grief, pregnancy mental health.
+HTML
+
+<section style="padding-top: 150px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 3rem; margin-bottom: 30px;">Fertility and Perinatal Support</h1>
+        <p>The journey to and through parenthood is rarely a straight line. It is a season of profound change that can bring up unexpected emotions, from the grief of infertility to the complexities of postpartum life.</p>
+        
+        <h2 style="margin-top: 40px;">Support for the Journey</h2>
+        <p>Whether you are navigating IVF, processing birth trauma, or struggling with the "baby blues," you don't have to carry it alone. I provide specialized therapeutic support tailored to the unique mental health needs of expecting and new parents.</p>
+        
+        <a href="index.html#about" class="btn">Reach Out Today</a>
+    </div>
+</section>
+3. File: ethical-non-monogamy.html
+SEO Focus: Polyamory-informed therapy, open relationship boundaries, ENM counseling.
+HTML
+
+<section style="padding-top: 150px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <h1 style="font-size: 3rem; margin-bottom: 30px;">Navigating Ethical Non-Monogamy</h1>
+        <p>Creating relationship structures that exist outside traditional norms requires intentionality, radical honesty, and clear boundaries. I offer a non-judgmental, poly-vibe-aware space to explore these dynamics.</p>
+        
+        <h2 style="margin-top: 40px;">Expertise in Alternative Structures</h2>
+        <p>From opening up a long-term relationship to managing jealousy in established polycules, we focus on the skills necessary for thriving in ethical non-monogamy: communication, self-regulation, and honoring the autonomy of all partners involved.</p>
+        
+        <a href="index.html#about" class="btn">Schedule a Session</a>
+    </div>
+</section>
+
+Updated Home Page Links & Footer
+In your main index.html file, update the "Areas of Expertise" links and the footer text to reflect your new changes:
+The Updated Links:
+HTML
+
+<div class="expertise-grid">
+    <a href="individual-couples.html" class="expertise-link">
+        <div class="expertise-card">
+            <h3>Individual and Couple's Counselling</h3>
+            <p>Finding calm and connection. Click to learn about our approach to individual and partner growth.</p>
+        </div>
+    </a>
+    <a href="fertility-perinatal.html" class="expertise-link">
+        <div class="expertise-card">
+            <h3>Fertility & Perinatal Support</h3>
+            <p>Support for the journey into parenthood. Click to read more about specialized care.</p>
+        </div>
+    </a>
+    <a href="ethical-non-monogamy.html" class="expertise-link">
+        <div class="expertise-card">
+            <h3>Navigating Ethical Non-Monogamy</h3>
+            <p>Cultivating honesty and autonomy. Click to explore our poly-informed therapy services.</p>
+        </div>
+    </a>
+</div>
+The Updated Footer:
+HTML
+
+<footer>
+    <p style="margin-bottom: 20px; opacity: 0.9;">Ready to plant some seeds for a better future?</p>
+    <a href="mailto:seedsoflifetherapy@gmail.com">seedsoflifetherapy@gmail.com</a>
+    <p style="margin-top: 40px; font-size: 0.7rem; opacity: 0.6;">© 2026 SEEDS OF LIFE THERAPY. ALL RIGHTS RESERVED.</p>
+</footer>
